@@ -59,3 +59,44 @@ Internet: 여러 네트워크의 연결
 ## 08 네트워크 인터페이스 선택 원리와 기준
 - cmd `route print` : 라우터 정보를 볼 수 있다.
 - 어떤 IP 주소는 어떤 네트워크 인터페이스랑 연결되기 마련
+
+## 09 웹 서비스를 만드신 분에 대하여...
+1. 문서(TEXT)
+2. 문서 + Link : HTML 형식
+3. HTML 전달 하기 위한 HTTP 프로토콜
+- HTML + HTTP = **Web**
+- 모든 문서 S/W 구조
+    1. 인터페이스(GUI)
+    2. 제어체계(S/W)
+    3. Data형식 = 자료구조
+
+## 10 초창기 웹 서비스 구조 (단방향 구조)
+- Web 티모시 버너스리
+- Web Client(Browser) - Internet - Web Server
+    - TCP/IP 연결(상태) + HTTP(Stateless)
+    - 연결되었다면 http.request
+    - http.response
+    - 브라우저를 이루는 핵심 요소
+        1. 구문분석기 : HTML을 파싱해 비선형 자료구조인 DOM형태로 만든다.
+        2. 렌더링 엔진 : DOM형태의 정보를 활용해 렌더링 한다.
+
+## 11 웹 서비스 3대 요소 (양방향 상호 작용) 
+**-> 문맥(상태 -> 전이) -> 기억(기록) Database의 등장**
+- 브라우저
+    1. 구문 분석기
+    2. 렌더링 엔진
+    3. 연산(처리) 엔진 : Mocha -> Live -> JavaScript
+- 쿠키(**기억(기록)**)
+    - key+value
+    - 속성
+        - 범위
+        - 기간
+- Web Server(송/수신)
+    - HDD 정적 리소스 : HTML + 사진 + CSS + JavaScript
+- Web Application Server(처리, 연산)
+    - http.request.method == POST
+    - Web Server
+    - Web Application Server
+    - HTML 동적으로 생성(id = tester)
+- Database(자료) **기억(기록)**
+    - SQL
